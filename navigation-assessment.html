@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Site Navigation</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        nav {
+            font-family: Arial;
+            background: #bff8f1;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        ul {
+          
+            list-style: none;
+            margin: 0 auto;
+            width: 430px;
+        }
+
+        li {
+            color: #2b645d;
+            display: block;
+            float: left;
+            padding: 1rem;
+            position: relative;
+            text-decoration: none;
+            transition-duration: 0.5s;
+        }
+          
+        li a {
+            color: #2b645d;
+        }
+
+         li a:hover,
+         li:hover a {
+            color: #fff;
+            transition-duration: 0.5s;
+        }
+
+        li:hover,
+        li:focus-within {
+            background: #72a59e;
+        }
+
+        li:focus-within a {
+            outline: none;
+        }
+
+        ul li ul {
+            background: #61aca2;
+            visibility: hidden;
+            opacity: 0;
+            width: 100%;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+        ul li:hover > ul,
+        ul li:focus-within > ul,
+        ul li ul:hover,
+        ul li ul:focus {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+
+        ul li ul li {
+            clear: both;
+            margin-left: -40px;
+            width: 100%;
+        }
+        .clearfix {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/about-us">About us</a></li>
+                <li><a href="/services">Our services</a>
+                    <ul>
+                        <li><a href="/services/strategy">Strategy</a></li>
+                        <li><a href="/services/strategy">Marketing</a></li>
+                        <li><a href="/services/design">Design</a></li>
+                        <li><a href="/services/development">Development</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contact">Contact us</a></li>
+                 <div class="clearfix"></div>
+            </ul>
+            <div class="clearfix"></div>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
+</body>
+</html>
